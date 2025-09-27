@@ -1,0 +1,135 @@
+html,
+body {
+    height: 99%;
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: Segoe UI, Roboto, Arial;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(#15202b, #0b1116);
+    border: 6px solid #222;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+#ui {
+    width: 900px;
+    margin: 14px auto;
+    display: flex;
+    gap: 12px;
+    align-items: top;
+}
+
+.panel {
+    background: #0e1720;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    flex: 1;
+}
+
+.panel h3 {
+    margin: 4px 0 8px 0;
+    font-size: 14px;
+    color: #bfe7ff
+}
+
+.pbar {
+    height: 12px;
+    background: #0b1620;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pbar>span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6a6a, #ffb86b);
+}
+
+.small {
+    font-size: 12px;
+    color: #9fb8c9
+}
+
+#shopOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent
+        /* rgba(2, 6, 10, 0.7) */
+    ;
+}
+
+#shop {
+    width: 760px;
+    max-width: 95%;
+    background: #04121b;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #cfe9ff
+}
+
+#shop h2 {
+    margin: 0 0 8px 0;
+}
+
+.shop-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.shop-col {
+    flex: 1;
+}
+
+.shop-item {
+    background: #08202a;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-accept {
+    background: #1f9a67;
+    color: white;
+}
+
+.btn-skip {
+    background: #444;
+    color: white;
+}
+
+.controls {
+    font-size: 13px;
+    color: #bcd;
+    margin-top: 6px;
+}
+
+#roundText {
+    width: 900px;
+    margin: 6px auto;
+    text-align: center;
+    color: #9fe;
+    font-weight: 700
+}

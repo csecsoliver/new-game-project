@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mutant Spiders — Local One-Screen Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="roundText"></div>
+    <div id="ui">
+        <div class="panel" id="playersUI"></div>
+        <div class="panel" style="width:220px;">
+            <h3>Game</h3>
+            <div id="roundStats" class="small">Round: 1 · Phase: Buy</div>
+            <div style="margin-top:8px;" class="small">Controls: P1: WASD + F attack · P2: Arrows + L attacker</div>
+        </div>
+    </div>
+
+
+    <canvas id="game" width="900" height="600"></canvas>
+
+    <!-- Shop overlay -->
+    <div id="shopOverlay">
+        <div id="shop">
+            <h2>Shop — buy limbs using HP (current HP = currency)</h2>
+            <div style="display:flex; gap:12px;">
+                <div class="shop-col">
+                    <h4>Legs (movement)</h4>
+                    <div class="shop-item">
+                        <div><strong>None</strong>
+                            <div class="small">No movement. Free.</div>
+                        </div>
+                        <div><button class="btn" data-type="legs" data-tier="0">Own</button></div>
+                    </div>
+                    <div class="shop-item">
+                        <div><strong>Twitch Legs</strong>
+                            <div class="small">+speed +0.8</div>
+                        </div>
+                        <div><button class="btn" data-type="legs" data-tier="1">Buy 15</button></div>
+                    </div>
+                    <div class="shop-item">
+                        <div><strong>Swift Legs</strong>
+                            <div class="small">+speed +1.8</div>
+                        </div>
+                        <div><button class="btn" data-type="legs" data-tier="2">Buy 30</button></div>
+                    </div>
+                </div>
+                <div class="shop-col">
+                    <h4>Arms (weapons)</h4>
+                    <div class="shop-item">
+                        <div><strong>Fist</strong>
+                            <div class="small">Short melee, low damage</div>
+                        </div>
+                        <div><button class="btn" data-type="arm" data-tier="fist">Buy 5</button></div>
+                    </div>
+                    <div class="shop-item">
+                        <div><strong>Chainsaw</strong>
+                            <div class="small">Close but strong</div>
+                        </div>
+                        <div><button class="btn" data-type="arm" data-tier="chainsaw">Buy 20</button></div>
+                    </div>
+                    <div class="shop-item">
+                        <div><strong>Pistol</strong>
+                            <div class="small">Range shots, low ammo</div>
+                        </div>
+                        <div><button class="btn" data-type="arm" data-tier="pistol">Buy 18</button></div>
+                    </div>
+                </div>
+                <div class="shop-col">
+                    <h4>Utility</h4>
+                    <div class="shop-item">
+                        <div><strong>Armor Plate</strong>
+                            <div class="small">Reduce incoming damage 15%</div>
+                        </div>
+                        <div><button class="btn" data-type="utility" data-tier="armor">Buy 22</button></div>
+                    </div>
+                    <div class="shop-item">
+                        <div><strong>Extra HP Pack</strong>
+                            <div class="small">Gain +20 max HP (non-stackable)</div>
+                        </div>
+                        <div><button class="btn" data-type="utility" data-tier="hpboost">Buy 25</button></div>
+                    </div>
+                    <div style="margin-top:12px;">
+                        <button class="btn btn-accept" id="doneBuy">Done buying (player complete)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:12px;" class="small">Active player: <strong id="activePlayerName"></strong> - Press DONE when finished or buy until you run out of HP.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
